@@ -43,12 +43,7 @@ if (options.detect) {
 var config = getConfig();
 comb.configure(config);
 
-if (process.stdin.isTTY) {
-  processFiles(options._);
-} else {
-  processSTDIN();
-}
-
+processFiles(options._);
 
 function getOptions() {
   var parserOptions = {
